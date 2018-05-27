@@ -1,37 +1,51 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	// clear: both;
+	// display: block;
+	// float: left;
+	// width: 100
+	position: absolute;
+	top:0;
+	left: -16rem;
+	width: 16rem;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: visible;
+	transition: left 0.3s ease;
+	z-index: 999;
+	background: $accent-color;
 
 	ul {
-		display: none;
+		// display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 
+		// submenu
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
+			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			// float: left;
+			// position: absolute;
+			// top: 100%;
+			// left: -999em;
+			// z-index: 99999;
+			padding-left: 1rem;
+			li: {
+				// border-bottom: 0;
+			}
 			ul {
-				left: -999em;
-				top: 0;
+				// left: -999em;
+				// top: 0;
 			}
 
 			li {
 				&:hover > ul,
 				&.focus > ul {
-					left: 100%;
+					// left: 100%;
 				}
 			}
 
 			a {
-				width: 200px;
+				// width: 200px;
 			}
 
 			:hover > a,
@@ -45,13 +59,13 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			// left: auto;
 		}
 	}
 
 	li {
-		float: left;
-		position: relative;
+		// float: left;
+		// position: relative;
 
 		&:hover > a,
 		&.focus > a {
@@ -68,22 +82,72 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
+
+	div {
+		// background: grey;
+		> ul {
+			// position: absolute;
+			// left: -16rem;
+			// width: 16rem;
+			// top:30px;
+			// transition: right 0.3s ease;
+
+
+			> li {
+				border-bottom: 1px solid;
+			}
+		}
+	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+/* Toggle menu. */
+// .menu-toggle,
+// .main-navigation.toggled ul:first-child {
+// display: block;
+#site-navigation {
+	&[aria-expanded="true"],
+	&:target {
+		left: 0;
+		box-shadow: 0.25rem 0 1rem rgba(0,0,0,.25);
+		+ .backdrop {
+			position: absolute;
+			display: block;
+			content: "";
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 998;
+			background: #000;
+			background: rgba(0,0,0,.75);
+			cursor: default;
+		}
+	}
 }
 
+/* Wide screen menu. */
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
-		display: block;
+	.main-navigation {
+		left: auto;
+		position: relative;
+		width: auto;
+		background: none;
+		div {
+			ul {
+				li {
+					float:left;
+					border-bottom: 0;
+				}
+			}
+		}
 	}
 }
+
+
+/* Navigation. */
 
 .comment-navigation,
 .posts-navigation,
