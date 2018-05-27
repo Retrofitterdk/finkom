@@ -1,19 +1,29 @@
 /**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
+* File navigation.js.
+*
+* Handles toggling the navigation menu for small screens and enables TAB key
+* navigation support for dropdown menus.
+*/
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, menuopen, backdrop, menuclose, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
 		return;
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
+	menuopen = document.getElementsByClassName( 'menu-toggle' )[0];
+	if ( 'undefined' === typeof menuopen ) {
+		return;
+	}
+
+	menuclose = document.getElementsByClassName( 'menu-toggle' )[1];
+	if ( 'undefined' === typeof menuclose ) {
+		return;
+	}
+
+	backdrop = document.getElementsByClassName( 'backdrop' )[0];
+	if ( 'undefined' === typeof backdrop ) {
 		return;
 	}
 
@@ -21,7 +31,7 @@
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
+		menuopen.style.display = 'none';
 		return;
 	}
 
@@ -30,16 +40,28 @@
 		menu.className += ' nav-menu';
 	}
 
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
+	menuopen.onclick = function(event) {
+			container.setAttribute( 'aria-expanded', 'true' );
+			menuopen.setAttribute( 'aria-expanded', 'true' );
+			menuclose.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
-		}
+			event.preventDefault();
+	};
+
+	menuclose.onclick = function(event) {
+			container.setAttribute( 'aria-expanded', 'false' );
+			menuopen.setAttribute( 'aria-expanded', 'false' );
+			menuclose.setAttribute( 'aria-expanded', 'false' );
+			menu.setAttribute( 'aria-expanded', 'false' );
+			event.preventDefault();
+	};
+
+	backdrop.onclick = function(event) {
+			container.setAttribute( 'aria-expanded', 'false' );
+			menuopen.setAttribute( 'aria-expanded', 'false' );
+			menuclose.setAttribute( 'aria-expanded', 'false' );
+			menu.setAttribute( 'aria-expanded', 'false' );
+			event.preventDefault();
 	};
 
 	// Get all the link elements within the menu.
@@ -52,8 +74,8 @@
 	}
 
 	/**
-	 * Sets or removes .focus class on an element.
-	 */
+	* Sets or removes .focus class on an element.
+	*/
 	function toggleFocus() {
 		var self = this;
 
@@ -74,11 +96,11 @@
 	}
 
 	/**
-	 * Toggles `focus` class to allow submenu access on tablets.
-	 */
+	* Toggles `focus` class to allow submenu access on tablets.
+	*/
 	( function( container ) {
 		var touchStartFn, i,
-			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+		parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
 
 		if ( 'ontouchstart' in window ) {
 			touchStartFn = function( e ) {
