@@ -13,21 +13,54 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
+textarea,
+select {
+	height: 3.8rem;
+	padding: .6rem 10rem; /* The 6px vertically centers text on FF, ignored by Webkit */
+	background-color: #fff;
+	box-shadow: none;
+	box-sizing: border-box;
+	color: $color__primary-text;
+	border: 1px solid $color__divider;
 	border-radius: 3px;
 	padding: 3px;
-
+	appearance: none;
 	&:focus {
-		color: $color__text-input-focus;
+		color: $color__primary-text;
+		outline: 0;
 	}
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 1px solid $color__divider;
 }
 
 textarea {
 	width: 100%;
+	min-height: 6.5rem;
+	padding-top: .6rem;
+	padding-bottom: .6rem;
+}
+
+label,
+legend {
+	display: block;
+	margin-bottom: .5rem;
+	font-weight: 600;
+}
+
+fieldset {
+	padding: 0;
+	border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+label > .label-body {
+	display: inline-block;
+	margin-left: .5rem;
+	font-weight: normal;
 }

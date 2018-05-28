@@ -1,12 +1,16 @@
+html {
+  font-size: 62.5%;
+}
+
 body,
 button,
 input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
+	color: $color__primary-text;
 	font-family: $font__main;
-	@include font-size(1);
+	@include font-size(1.6);
 	line-height: $font__line-height-body;
 }
 
