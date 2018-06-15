@@ -77,10 +77,13 @@ if ( ! function_exists( 'finkom_setup' ) ) :
   /**
   * Add support for wide alignment
   *
-  * @link https://codex.wordpress.org/Theme_Logo
   */
   add_theme_support( 'align-wide' );
 
+  /**
+  * Add support for color palette
+  *
+  */
   add_theme_support( 'editor-color-palette',
   array(
     'name' => __('Dark primary color','finkom'),
