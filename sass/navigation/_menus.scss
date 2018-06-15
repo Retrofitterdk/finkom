@@ -126,7 +126,7 @@
 }
 
 /* Wide screen menu. */
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: $larger-than-tablet) {
 	.menu-toggle {
 		display: none;
 	}
