@@ -1,0 +1,21 @@
+// Images
+
+// Captions
+.wp-block-image figcaption {
+  margin-top: .25em;
+  color: $color__secondary-text;
+  text-align: left;
+  @include font-size(16);
+}
+figcaption {
+  .alignfull &
+  {
+    margin-left: $col__margin;
+  }
+  .alignwide & {
+    margin-left: $col__margin;
+    @media (min-width: $larger-than-phablet) {
+      margin-left: 0;
+    }
+  }
+}
