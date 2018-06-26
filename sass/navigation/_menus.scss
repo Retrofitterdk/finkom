@@ -1,8 +1,4 @@
 .main-navigation {
-	// clear: both;
-	// display: block;
-	// float: left;
-	// width: 100
 	position: absolute;
 	top:0;
 	left: -16rem;
@@ -12,99 +8,45 @@
 	overflow-x: visible;
 	transition: left 0.3s ease;
 	z-index: 999;
-	background: $color__accent;
-
+	background: $color__primary-dark;
 	ul {
-		// display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
-		// submenu
-		ul {
-			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			// float: left;
-			// position: absolute;
-			// top: 100%;
-			// left: -999em;
-			// z-index: 99999;
-			padding-left: 1rem;
-			li: {
-				// border-bottom: 0;
-			}
-			ul {
-				// left: -999em;
-				// top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					// left: 100%;
+		a {
+			display: block;
+			text-decoration: none;
+			// padding: 0 1rem;
+			// color: $color__icon-text;
+			text-transform: uppercase;
+			@include font-size(17);
+		}
+	}
+	a {
+		padding: 0 1rem;
+		color: $color__icon-text;
+		&:visited,
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__icon-text;
+}
+	}
+	div {
+		> ul {
+			> li {
+				border-bottom: 1px solid $color__divider;
+				margin: .5rem 0;
+				padding-bottom: .5rem;
+				> ul {
+					padding-left: 1rem;
+					> li {
+						margin: 0;
+					}
 				}
 			}
-
-			a {
-				// width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			// left: auto;
 		}
 	}
-
-	li {
-		// float: left;
-		// position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-
-	div {
-		// background: grey;
-		> ul {
-			// position: absolute;
-			// left: -16rem;
-			// width: 16rem;
-			// top:30px;
-			// transition: right 0.3s ease;
-
-
-			> li {
-				border-bottom: 1px solid;
-			}
-		}
-	}
-}
-
-/* Toggle menu. */
-// .menu-toggle,
-// .main-navigation.toggled ul:first-child {
-// display: block;
-#site-navigation {
 	&[aria-expanded="true"],
 	&:target {
 		left: 0;
@@ -123,29 +65,224 @@
 			cursor: default;
 		}
 	}
-}
-
-/* Wide screen menu. */
-@media screen and (min-width: $larger-than-tablet) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation {
+	@media (min-width: $larger-than-tablet) {
 		left: auto;
-		position: relative;
+		position: inherit;
 		width: auto;
 		background: none;
+		overflow: hidden;
+		height: 60px;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0;
+			a {
+				color: $color__primary-dark;
+				padding: 0.5rem 1rem 0.6rem;
+				margin: 0;
+				line-height: 1.125rem;
+				&:visited,
+				&:hover,
+				&:focus,
+				&:active {
+					color: $color__primary-dark;
+				}
+			}
+			li {
+				a {
+					width: auto;
+					color: $color__icon-text;
+					padding: .5rem 1rem;
+					&:visited,
+					&:hover,
+					&:focus,
+					&:active {
+						color: $color__icon-text;
+					}
+				}
+			}
+		}
 		div {
-			ul {
-				li {
-					float:left;
+			> ul {
+				> li {
 					border-bottom: 0;
+					margin-top: 0;
+					> a {
+						border-top: 4px solid transparent;
+						border-bottom: 0;
+						text-align: center;
+						&:hover,
+						&:focus {
+							border-top: 4px solid $color__primary-dark;
+						}
+					}
+					&.current_page_item > a,
+					&.current-menu-item > a,
+					&.current_page_ancestor > a,
+					&.current-menu-ancestor > a {
+						border-top: 4px solid $color__primary-dark;
+					}
+					> ul {
+						border-right: 1px solid $color__divider;
+					}
+				}
+				> li.menu-item-has-children {
+					> a {
+						&:before {
+							content: "D";
+							font-family: "Finicon";
+							margin-left: -.8rem;
+							vertical-align: middle;
+							font-size: 105%;
+							padding-right: 0.3rem;
+						}
+					}
+					> ul.sub-menu {
+						padding-left: 0;
+						position: absolute;
+						display: none;
+						border-radius: 3px;
+						z-index: 99999;
+						max-width: 20rem;
+						background: $color__primary-dark;
+						&:before {
+							position: absolute;
+							top: -7px;
+							left: 0;
+							margin-left: 4px;
+							content: " ";
+							display: block;
+							border-right: 8px solid transparent;
+							border-bottom: 8px solid $color__primary-dark;
+							border-left: 8px solid transparent;
+						}
+						> li {
+							border-bottom: 1px solid $color__divider;
+							display: block;
+						}
+					}
+					&:hover,
+					&:focus {
+						ul.sub-menu {
+							display: block;
+						}
+					}
 				}
 			}
 		}
 	}
 }
 
+/* Toggle menu. */
+.main-navigation {
+	// &[aria-expanded="true"],
+	// &:target {
+	// 	left: 0;
+	// 	box-shadow: 0.25rem 0 1rem rgba(0,0,0,.25);
+	// 	+ .backdrop {
+	// 		position: absolute;
+	// 		display: block;
+	// 		content: "";
+	// 		left: 0;
+	// 		top: 0;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		z-index: 998;
+	// 		background: #000;
+	// 		background: rgba(0,0,0,.75);
+	// 		cursor: default;
+	// 	}
+	// }
+}
+
+.menu-toggle {
+	@include font-size(20);
+	line-height: 3rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: $color__primary-dark;
+	&:visited,
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__primary-dark;
+	}
+	&:before {
+		content: "=";
+		font-family: "Finicon";
+		vertical-align: middle;
+		@include font-size(32);
+		letter-spacing: .3rem;
+	}
+	@media (min-width: $larger-than-tablet) {
+		display: none;
+	}
+}
+
+.main-navigation {
+	&[aria-expanded="true"],
+	&:target {
+		.menu-toggle {
+			&:before {
+				content: "x";
+				float: right;
+			}
+		}
+	}
+}
+
+// Social Menu
+#social-menu-container {
+	ul#social-menu {
+		padding: 0 1rem;
+		li {
+			display:  inline-block;
+			position: relative;
+			border-bottom: 0;
+			a {
+				padding: 0;
+				&:before {
+					content: " ";
+					font-family: "Finicon";
+					@include font-size(32);
+				}
+			}
+			a[href*="linkedin.com"],
+			a[href*="linkedin.dk"] {
+				&:before {
+					content: "L";
+				}
+			}
+			a[href*="twitter.dk"],
+			a[href*="twitter.com"] {
+				&:before {
+					content: "T";
+				}
+			}
+			a[href*="instagram.dk"],
+			a[href*="instagram.com"] {
+				&:before {
+					content: "I";
+				}
+			}
+			a[href*="facebook.dk"],
+			a[href*="facebook.com"] {
+				&:before {
+					content: "F";
+				}
+			}
+			a[href*="pinterest.com"],
+			a[href*="pinterest.dk"] {
+				&:before {
+					content: "P";
+				}
+			}
+		}
+	}
+	@media (min-width: $larger-than-tablet) {
+		display: none;
+	}
+}
 
 /* Navigation. */
 
