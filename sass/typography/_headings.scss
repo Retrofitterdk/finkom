@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $font__heading;
 	line-height: $font__line-height-heading;
 	margin-top: 0;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	font-weight: 300;
 	clear: both;
 }
@@ -30,24 +30,33 @@ h6 {
 	color: $color__primary-text;
 	@include font-size(28);
 	text-transform: lowercase;
+	line-height: 1.75;
 	& a {
-	text-decoration: none;
-	color: $color__primary-text;
-	& .first {
-		font-family: "Arvo", monospace;
-	}
-	& .divider {
-		color: $color__primary-dark;
-		font-family: "Finicon";
-		vertical-align: bottom;
-		letter-spacing: -.35em;
-		margin-left: -.35em;
-		// &:before {
-		// content: '\61';
-	// }
+		text-decoration: none;
+		color: $color__primary-text;
+		& .first {
+			font-family: "Arvo", monospace;
 		}
-	& .last {
-		font-weight: bold;
+		& .divider {
+			color: $color__primary-dark;
+			font-family: "Finicon";
+			vertical-align: bottom;
+			letter-spacing: -.35em;
+			margin-left: -.35em;
+		}
+		& .last {
+			font-weight: bold;
+		}
+	}
+	@media (min-width: $larger-than-tablet) {
+		@include font-size(34);
+		line-height: 1.15;
 	}
 }
+
+.entry-header {
+	@media (min-width: $larger-than-tablet) {
+		margin-left: -27%;
+		margin-right: -27%;
+	}
 }
