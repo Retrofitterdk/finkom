@@ -2,25 +2,17 @@
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	// 	@media (min-width: $larger-than-tablet) {
-	// 	width: $site_maxwidth-content
-	// }
 }
 
 .content-area {
-	// margin: 0 (-$size__site-sidebar) 0 0;
-	// body.has-sidebar & {
 		@media (min-width: $larger-than-tablet) {
 			width: $nine-col;
-			// float: left;
 			margin-right: auto;
 			margin-left: auto;
-		// }
 	}
 }
 
 .site-main {
-	// margin: 0 $size__site-sidebar 0 0;
 	@media (min-width: $larger-than-phablet) {
 		width: $two-thirds-col;
 		margin-right: auto;
@@ -29,7 +21,6 @@
 }
 
 .site-content .widget-area {
-	// overflow: hidden;
 	@media (min-width: $larger-than-tablet) {
 		width: $three-col;
 		float: right;
