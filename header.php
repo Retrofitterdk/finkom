@@ -44,16 +44,12 @@
 						<p class="site-description screen-reader-text"><?php echo $finkom_description; /* WPCS: xss ok. */ ?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
-				<a href="#site-navigation" role="button" id="primary-menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-label="<?php esc_html_e( 'Open primary menu', 'finkom' ); ?>" aria-expanded="false"><?php esc_html_e( 'Open primary Menu', 'finkom' ); ?></a>
+				<a href="#site-navigation" role="button" id="primary-menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-label="<?php esc_html_e( 'Open primary menu', 'finkom' ); ?>" aria-expanded="false"><?php esc_html_e( 'Content', 'finkom' ); ?></a>
 				<nav id="site-navigation" class="main-navigation" aria-expanded="false">
-					<a href="#" role="button" id="primary-menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-label="<?php esc_html_e( 'Close primary menu', 'finkom' ); ?>" aria-expanded="false"><?php esc_html_e( 'Close primary Menu', 'finkom' ); ?></a>
+					<a href="#" role="button" id="primary-menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-label="<?php esc_html_e( 'Close primary menu', 'finkom' ); ?>" aria-expanded="false"><?php esc_html_e( 'Content', 'finkom' ); ?></a>
 					<?php
-					wp_nav_menu( array(
-						'theme_location'  => 'menu-1',
-						'menu_id'         => 'primary-menu',
-						'container_class' => 'nav-menu',
-						'container_id'    => 'primary-menu-container',
-					) );
+					get_template_part( 'components/navigation/menu', 'main' );
+					get_template_part( 'components/navigation/menu', 'social' );
 					?>
 				</nav><!-- #site-navigation -->
 				<a href="#" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
