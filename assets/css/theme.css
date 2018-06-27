@@ -404,7 +404,7 @@ h6 {
     text-decoration: none;
     color: #212121; }
     .site-branding .site-title a .first {
-      font-family: "Arvo", monospace; }
+      font-family: "Arvo", sans-serif; }
     .site-branding .site-title a .divider {
       color: #d32f2f;
       font-family: "Finicon";
@@ -412,17 +412,24 @@ h6 {
       letter-spacing: -.35em;
       margin-left: -.35em; }
     .site-branding .site-title a .last {
-      font-weight: bold; }
+      font-weight: bold;
+      font-family: "PT Sans", sans-serif; }
   @media (min-width: 960px) {
     .site-branding .site-title {
       font-size: 34px;
       font-size: 2.125rem;
-      line-height: 1.15; } }
+      line-height: 1.15; }
+      .has-header-image .site-branding .site-title {
+        line-height: 1.3; } }
 
 @media (min-width: 960px) {
   .entry-header {
     margin-left: -27%;
     margin-right: -27%; } }
+
+.home .entry-title {
+  width: 50%;
+  margin-top: 10%; }
 
 p {
   margin-bottom: 1.5em; }
@@ -796,7 +803,7 @@ a {
       width: auto;
       background: none;
       overflow: hidden;
-      height: 60px; }
+      height: 45px; }
       .main-navigation li {
         display: inline-block;
         vertical-align: top;
@@ -1187,7 +1194,8 @@ object {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.site {
+.site,
+.wrapper {
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -1198,6 +1206,16 @@ object {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+.custom-header-image {
+  margin-left: calc( -100vw / 2 + 100% / 2);
+  margin-right: calc( -100vw / 2 + 100% / 2);
+  width: 100vw;
+  height: 50px;
+  background-position: top center;
+  background-size: cover; }
+  .home .custom-header-image {
+    height: 450px; }
+
 .site-branding {
   float: right; }
   .site-branding .site-title {
