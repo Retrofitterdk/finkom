@@ -17,6 +17,11 @@ function finkom_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	// Add a class if there is a custom header.
+	if ( has_header_image() ) {
+		$classes[] = 'has-header-image';
+	}
+
 	// Adds a class of no-sidebar when there is no sidebar present.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar'; }
@@ -28,7 +33,7 @@ function finkom_body_classes( $classes ) {
 		return $classes;
 	}
 	add_filter( 'body_class', 'finkom_body_classes' );
-	
+
 	/**
 	* Add a pingback url auto-discovery header for single posts, pages, or attachments.
 	*/
@@ -38,3 +43,10 @@ function finkom_body_classes( $classes ) {
 		}
 	}
 	add_action( 'wp_head', 'finkom_pingback_header' );
+
+	/**
+	 * Checks to see if we're on the front page or not.
+	 */
+	function finkom_is_frontpage() {
+		return ( is_front_page() && ! is_home() );
+	}
