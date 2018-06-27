@@ -74,6 +74,28 @@ if ( ! function_exists( 'finkom_setup' ) ) :
       'flex-height' => true,
     ) );
   }
+  /**
+   * Set up the WordPress core custom header feature.
+   *
+   * @link https://developer.wordpress.org/themes/functionality/custom-headers/
+   *
+   * @uses finkom_header_style()
+   */
+
+  add_theme_support(
+    'custom-header', apply_filters(
+      'finkom_custom_header_args', array(
+        'default-image'          => '',
+    		'default-text-color'     => '000000',
+        'width'            => 2000,
+        'height'           => 1200,
+        'flex-height'      => true,
+        'video'            => true,
+        'wp-head-callback'       => 'finkom_header_style',
+      )
+    )
+  );
+
 
   /**
   * Add support for wide alignment
