@@ -15,7 +15,10 @@
 	<div class="site-info">
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'finkom' ) ); ?>">
 			<?php
-			finkom_display_contact_info();
+			if ( ! function_exists( 'finkom_display_contact_info' ) ) :
+				finkom_display_contact_info();
+			endif;
+
 
 			/* translators: %s: CMS name, i.e. WordPress. */
 			printf( esc_html__( 'Proudly powered by %s', 'finkom' ), 'WordPress' );
