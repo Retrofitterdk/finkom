@@ -15,7 +15,7 @@
 	<div class="site-info">
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'finkom' ) ); ?>">
 			<?php
-			if ( ! function_exists( 'finkom_display_contact_info' ) ) :
+			if ( function_exists( 'finkom_display_contact_info' ) ) :
 				finkom_display_contact_info();
 			endif;
 
