@@ -12,24 +12,12 @@
 ?>
 </div><!-- #content -->
 <footer id="colophon" class="site-footer">
-	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'finkom' ) ); ?>">
-			<?php
-			if ( function_exists( 'finkom_display_contact_info' ) ) :
-				finkom_display_contact_info();
-			endif;
-
-
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'Proudly powered by %s', 'finkom' ), 'WordPress' );
-			?>
-		</a>
-		<span class="sep"> | </span>
+	<div class="wrapper">
 		<?php
-		/* translators: 1: Theme name, 2: Theme author. */
-		printf( esc_html__( 'Theme: %1$s by %2$s.', 'finkom' ), 'finkom', '<a href="https://www.retrofitter.dk">Steffen Bang Nielsen</a>' );
+		get_template_part( 'components/footer/info', 'site' );
+		get_template_part( 'components/navigation/menu', 'social' );
 		?>
-	</div><!-- .site-info -->
+	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
