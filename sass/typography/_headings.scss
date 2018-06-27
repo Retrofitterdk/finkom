@@ -35,7 +35,7 @@ h6 {
 		text-decoration: none;
 		color: $color__primary-text;
 		& .first {
-			font-family: "Arvo", monospace;
+			font-family: $font__heading;
 		}
 		& .divider {
 			color: $color__primary-dark;
@@ -46,11 +46,15 @@ h6 {
 		}
 		& .last {
 			font-weight: bold;
+			font-family: $font__main;
 		}
 	}
 	@media (min-width: $larger-than-tablet) {
 		@include font-size(34);
 		line-height: 1.15;
+		.has-header-image & {
+			line-height: 1.3;
+		}
 	}
 }
 
@@ -59,4 +63,12 @@ h6 {
 		margin-left: -27%;
 		margin-right: -27%;
 	}
+}
+
+.entry-title {
+	.home & {
+		width: 50%;
+		margin-top: 10%;
+	}
+
 }
