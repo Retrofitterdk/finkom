@@ -1,0 +1,14 @@
+.site-header {
+  margin-bottom: 2rem;
+  .custom-header-image {
+    margin-left: calc( -100vw / 2 + 100% / 2 );
+    margin-right: calc( -100vw / 2 + 100% / 2 );
+    width: 100vw;
+    height: 50px;
+    background-position: top center;
+    background-size: cover;
+    .home & {
+      height: 450px;
+    }
+  }
+}

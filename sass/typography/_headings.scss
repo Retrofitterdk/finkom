@@ -26,37 +26,54 @@ h6 {
 	@include font-size(17);
 }
 
-.site-branding .site-title {
-	color: $color__primary-text;
-	@include font-size(28);
-	text-transform: lowercase;
-	line-height: 1.75;
-	& a {
-		text-decoration: none;
+.site-branding,
+.site-info {
+	.site-title {
 		color: $color__primary-text;
-		& .first {
-			font-family: $font__heading;
-		}
-		& .divider {
-			color: $color__primary-dark;
-			font-family: "Finicon";
-			vertical-align: bottom;
-			letter-spacing: -.35em;
-			margin-left: -.35em;
-		}
-		& .last {
-			font-weight: bold;
-			font-family: $font__main;
-		}
-	}
-	@media (min-width: $larger-than-tablet) {
-		@include font-size(34);
-		line-height: 1.15;
-		.has-header-image & {
-			line-height: 1.3;
+		text-transform: lowercase;
+		& a {
+			text-decoration: none;
+			color: $color__primary-text;
+			&:visited,
+			&:hover,
+			&:focus,
+			&:active {
+				color: $color__primary-text;
+			}
+			& .first {
+				font-family: $font__heading;
+			}
+			& .divider {
+				color: $color__primary-dark;
+				font-family: "Finicon";
+				vertical-align: bottom;
+				letter-spacing: -.35em;
+				margin-left: -.35em;
+			}
+			& .last {
+				font-weight: bold;
+				font-family: $font__main;
+			}
 		}
 	}
 }
+
+.site-branding {
+	float: right;
+	.site-title {
+		margin: 0 0 0 0.5rem;
+		@include font-size(28);
+		line-height: 1.75;
+		@media (min-width: $larger-than-tablet) {
+			@include font-size(34);
+			line-height: 1.15;
+			.has-header-image & {
+				line-height: 1.3;
+			}
+		}
+	}
+}
+
 
 .entry-header {
 	@media (min-width: $larger-than-tablet) {

@@ -30,7 +30,7 @@
 		&:focus,
 		&:active {
 			color: $color__icon-text;
-}
+		}
 	}
 	div {
 		> ul {
@@ -220,6 +220,7 @@
 			border-bottom: 0;
 			a {
 				padding: 0;
+				text-decoration: none;
 				&:before {
 					content: " ";
 					font-family: "Finicon";
@@ -259,29 +260,31 @@
 		}
 	}
 	@media (min-width: $larger-than-tablet) {
-		display: none;
+		header & {
+			display: none;
+		}
 	}
 }
 
-/* Navigation. */
+	/* Navigation. */
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
+		.site-main & {
+			margin: 0 0 1.5em;
+			overflow: hidden;
+		}
+
+		.nav-previous {
+			float: left;
+			width: 50%;
+		}
+
+		.nav-next {
+			float: right;
+			text-align: right;
+			width: 50%;
+		}
 	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
