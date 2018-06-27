@@ -10,4 +10,36 @@ $columns: (
 	9: 11.11%
 );
 
+// Column margins
 $columns__margin: 3.8%;
+
+
+
+
+// Column widths
+$one-col:    4.67%;
+$two-col:    13.33%;
+$three-col:  22%;
+$four-col:   30.67%;
+$five-col:   39.33%;
+$six-col:    48%;
+$seven-col:  56.67%;
+$eight-col:  65.33%;
+$nine-col:   74%;
+$ten-col:    82.67%;
+$eleven-col: 91.33%;
+$twelve-col: 100%;
+// Column margins
+$col__margin: 4%;
+
+
+// Inner columns in content-area
+$inner-col: 6.31%;
+$one-third-col: 29.73%;
+$two-thirds-col: 64.86%;
+// Inner column margins
+$inner-col-margin: 5.4%;
+
+// Inner columns in site-main
+$inner-inner-col: 9.73%;
+$inner-inner-col-margin: 8.33%;

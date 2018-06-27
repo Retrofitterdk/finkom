@@ -1,2 +1,13 @@
+$site_maxwidth: 1280px; // Maximum width the entire site should not exceed
+$site_maxwidth-content: 65.33%; // Maximum width the main content text should not exceed
+// $spacing_horizontal: 10px; // General horizontal padding
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+// Breakpoints
+
+
+$larger-than-mobile: 460px;
+$larger-than-phablet: 650px;
+$larger-than-tablet: 960px;
+$larger-than-desktop: 1200px;

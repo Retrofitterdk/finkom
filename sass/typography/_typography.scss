@@ -4,10 +4,15 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
+	color: $color__primary-text;
 	font-family: $font__main;
-	@include font-size(1);
+	@include font-size(16);
 	line-height: $font__line-height-body;
+	@media (min-width: $larger-than-mobile) {
+		@include font-size(17);
+}	@media (min-width: $larger-than-tablet) {
+		@include font-size(18);
+}
 }
 
 @import "headings";

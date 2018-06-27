@@ -1,0 +1,35 @@
+.site-content {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.content-area {
+		@media (min-width: $larger-than-tablet) {
+			width: $nine-col;
+			margin-right: auto;
+			margin-left: auto;
+	}
+}
+
+.site-main {
+	@media (min-width: $larger-than-phablet) {
+		width: $two-thirds-col;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.site-content .widget-area {
+	@media (min-width: $larger-than-tablet) {
+		width: $three-col;
+		float: right;
+	}
+}
+
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+}
+
+@import "has-sidebar";

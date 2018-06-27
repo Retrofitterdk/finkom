@@ -37,7 +37,8 @@ if ( ! function_exists( 'finkom_setup' ) ) :
 
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus( array(
-      'menu-1' => esc_html__( 'Primary', 'finkom' ),
+      'main' => esc_html__( 'Main menu', 'finkom' ),
+      'social' => esc_html__( 'Social menu', 'finkom' ),
     ) );
 
     /*
@@ -77,10 +78,13 @@ if ( ! function_exists( 'finkom_setup' ) ) :
   /**
   * Add support for wide alignment
   *
-  * @link https://codex.wordpress.org/Theme_Logo
   */
   add_theme_support( 'align-wide' );
 
+  /**
+  * Add support for color palette
+  *
+  */
   add_theme_support( 'editor-color-palette',
   array(
     'name' => __('Dark primary color','finkom'),

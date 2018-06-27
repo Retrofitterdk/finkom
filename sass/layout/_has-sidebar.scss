@@ -1,0 +1,13 @@
+.has-sidebar {
+	.content-area {
+		float: left;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.site-main {
+		@media (min-width: $larger-than-tablet) {
+			margin-left: $one-third-col + $col__margin;
+		}
+	}
+}

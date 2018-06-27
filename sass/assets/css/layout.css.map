@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "layout.css",
+	"sources": [
+		"../../layout/layout.scss",
+		"../../layout/header.scss"
+	],
+	"names": [],
+	"mappings": "AAAA;;gEAEgE"
+}
