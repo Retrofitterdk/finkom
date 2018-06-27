@@ -88,9 +88,8 @@ if ( ! function_exists( 'finkom_setup' ) ) :
         'default-image'          => '',
     		'default-text-color'     => '000000',
         'width'            => 2000,
-        'height'           => 1200,
+        'height'           => 450,
         'flex-height'      => true,
-        'video'            => true,
         'wp-head-callback'       => 'finkom_header_style',
       )
     )
