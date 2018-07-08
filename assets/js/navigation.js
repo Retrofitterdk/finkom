@@ -5,7 +5,12 @@
 * navigation support for dropdown menus.
 */
 ( function() {
-	var container, menuopen, backdrop, menuclose, menu, links, i, len;
+	var body, container, menuopen, backdrop, menuclose, menu, links, i, len;
+
+	body = document.body;
+	if ( ! body ) {
+		return;
+	}
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -41,27 +46,30 @@
 	}
 
 	menuopen.onclick = function(event) {
-			container.setAttribute( 'aria-expanded', 'true' );
-			menuopen.setAttribute( 'aria-expanded', 'true' );
-			menuclose.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-			event.preventDefault();
+		body.classList.add("no-scroll");
+		container.setAttribute( 'aria-expanded', 'true' );
+		menuopen.setAttribute( 'aria-expanded', 'true' );
+		menuclose.setAttribute( 'aria-expanded', 'true' );
+		menu.setAttribute( 'aria-expanded', 'true' );
+		event.preventDefault();
 	};
 
 	menuclose.onclick = function(event) {
-			container.setAttribute( 'aria-expanded', 'false' );
-			menuopen.setAttribute( 'aria-expanded', 'false' );
-			menuclose.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-			event.preventDefault();
+		body.classList.remove("no-scroll");
+		container.setAttribute( 'aria-expanded', 'false' );
+		menuopen.setAttribute( 'aria-expanded', 'false' );
+		menuclose.setAttribute( 'aria-expanded', 'false' );
+		menu.setAttribute( 'aria-expanded', 'false' );
+		event.preventDefault();
 	};
 
 	backdrop.onclick = function(event) {
-			container.setAttribute( 'aria-expanded', 'false' );
-			menuopen.setAttribute( 'aria-expanded', 'false' );
-			menuclose.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-			event.preventDefault();
+		body.classList.remove("no-scroll");
+		container.setAttribute( 'aria-expanded', 'false' );
+		menuopen.setAttribute( 'aria-expanded', 'false' );
+		menuclose.setAttribute( 'aria-expanded', 'false' );
+		menu.setAttribute( 'aria-expanded', 'false' );
+		event.preventDefault();
 	};
 
 	// Get all the link elements within the menu.
