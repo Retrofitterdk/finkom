@@ -130,6 +130,37 @@
 		"oAP": "\/assets\/fonts\/arvo\/arvo-v10-latin-regular.woff2",
 		"oF": 0
 		},
+	"\/assets\/fonts\/finicon\/finicon.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/finicon\/finicon.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/finicon\/finicon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/finicon\/finicon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/finicon\/finicon.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/finicon\/finicon.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/finicon\/finicon.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/finicon\/finicon.woff",
+		"oF": 0
+		},
 	"\/assets\/fonts\/fonts-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -274,6 +305,13 @@
 		"oAP": "\/components\/content-page.php",
 		"oF": 0
 		},
+	"\/components\/content-project.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/content-project.php",
+		"oF": 0
+		},
 	"\/components\/content-search.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -286,6 +324,48 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/components\/content.php",
+		"oF": 0
+		},
+	"\/components\/footer\/info-site.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/footer\/info-site.php",
+		"oF": 0
+		},
+	"\/components\/header\/branding-site.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/header\/branding-site.php",
+		"oF": 0
+		},
+	"\/components\/header\/header-image.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/header\/header-image.php",
+		"oF": 0
+		},
+	"\/components\/header\/navigation-site.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/header\/navigation-site.php",
+		"oF": 0
+		},
+	"\/components\/navigation\/menu-main.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/navigation\/menu-main.php",
+		"oF": 0
+		},
+	"\/components\/navigation\/menu-social.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/navigation\/menu-social.php",
 		"oF": 0
 		},
 	"\/components\/page\/entrycontent.php": {
@@ -363,6 +443,55 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/components\/post\/entrysummary.php",
+		"oF": 0
+		},
+	"\/components\/project\/entrycontent.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/project\/entrycontent.php",
+		"oF": 0
+		},
+	"\/components\/project\/entryfooter.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/project\/entryfooter.php",
+		"oF": 0
+		},
+	"\/components\/project\/entryheader-search.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/project\/entryheader-search.php",
+		"oF": 0
+		},
+	"\/components\/project\/entryheader.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/project\/entryheader.php",
+		"oF": 0
+		},
+	"\/components\/project\/entrymedia.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/project\/entrymedia.php",
+		"oF": 0
+		},
+	"\/components\/project\/entrymeta.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/project\/entrymeta.php",
+		"oF": 0
+		},
+	"\/components\/project\/entrysummary.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/project\/entrysummary.php",
 		"oF": 0
 		},
 	"\/footer.php": {
@@ -549,6 +678,19 @@
 		"oAP": "\/sass\/assets\/css\/layout.css.map",
 		"oF": 0
 		},
+	"\/sass\/elements\/_blocks.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/sass\/assets\/css\/_blocks.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/elements\/_elements.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -627,7 +769,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/layout\/_content-sidebar.scss": {
+	"\/sass\/layout\/_content.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -635,12 +777,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/sass\/assets\/css\/_content-sidebar.css",
+		"oAP": "\/sass\/assets\/css\/_content.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/layout\/_no-sidebar.scss": {
+	"\/sass\/layout\/_footer.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -648,12 +790,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/sass\/assets\/css\/_no-sidebar.css",
+		"oAP": "\/sass\/assets\/css\/_footer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/layout\/_sidebar-content.scss": {
+	"\/sass\/layout\/_has-sidebar.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -661,12 +803,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/sass\/assets\/css\/_sidebar-content.css",
+		"oAP": "\/sass\/assets\/css\/_has-sidebar.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/layout\/header.scss": {
+	"\/sass\/layout\/_header.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -674,12 +816,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/sass\/assets\/css\/header.css",
+		"oAP": "\/sass\/assets\/css\/_header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/layout\/layout.scss": {
+	"\/sass\/layout\/_layout.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -687,7 +829,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/sass\/assets\/css\/layout.css",
+		"oAP": "\/sass\/assets\/css\/_layout.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1027,6 +1169,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/sidebar.php",
+		"oF": 0
+		},
+	"\/single-project.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/single-project.php",
 		"oF": 0
 		},
 	"\/single.php": {

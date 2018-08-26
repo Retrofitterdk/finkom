@@ -78,8 +78,10 @@ h6 {
 .entry-header {
 	@media (min-width: $larger-than-tablet) {
 		margin-left: -27%;
+		body.no-sidebar & {
 		margin-right: -27%;
-	}
+		}
+}
 }
 
 .entry-title {

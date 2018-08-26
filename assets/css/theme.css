@@ -440,8 +440,9 @@ h6 {
 
 @media (min-width: 960px) {
   .entry-header {
-    margin-left: -27%;
-    margin-right: -27%; } }
+    margin-left: -27%; }
+    body.no-sidebar .entry-header {
+      margin-right: -27%; } }
 
 .home .entry-title {
   width: 50%;
@@ -577,7 +578,7 @@ table {
   width: 100%; }
   table th,
   table td {
-    padding: 1.2rem 15rem;
+    padding: 1.2rem 1.5rem;
     text-align: left;
     border-bottom: 1px solid #BDBDBD; }
     table th:first-child, table th:first-child,
@@ -1045,7 +1046,8 @@ a {
   .alignwide {
     margin-left: calc( -100vw / 2 + 100% / 2);
     margin-right: calc( -100vw / 2 + 100% / 2);
-    width: 100vw; }
+    width: 100vw;
+    max-width: none; }
   @media (min-width: 960px) {
     body.has-sidebar .entry-content .alignfull, body.has-sidebar .entry-content
     .alignwide {
