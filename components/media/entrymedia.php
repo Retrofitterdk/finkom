@@ -6,5 +6,9 @@
 *
 * @package Fin:kom
 */
-
-finkom_post_thumbnail();
+?>
+<div class="entry-media">
+  <?php
+  finkom_post_thumbnail();
+  ?>
+</div><!-- .entry-header -->

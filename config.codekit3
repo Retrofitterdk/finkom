@@ -284,6 +284,13 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
+	"\/components\/comments\/entrycomments.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/comments\/entrycomments.php",
+		"oF": 0
+		},
 	"\/components\/content-front-page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -326,6 +333,13 @@
 		"oAP": "\/components\/content.php",
 		"oF": 0
 		},
+	"\/components\/content\/entrycontent.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/content\/entrycontent.php",
+		"oF": 0
+		},
 	"\/components\/footer\/info-site.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -354,6 +368,48 @@
 		"oAP": "\/components\/header\/navigation-site.php",
 		"oF": 0
 		},
+	"\/components\/heading\/entryheader-search.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/heading\/entryheader-search.php",
+		"oF": 0
+		},
+	"\/components\/heading\/entryheader.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/heading\/entryheader.php",
+		"oF": 0
+		},
+	"\/components\/media\/entrymedia.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/media\/entrymedia.php",
+		"oF": 0
+		},
+	"\/components\/meta\/entryfooter.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/meta\/entryfooter.php",
+		"oF": 0
+		},
+	"\/components\/meta\/entrymeta-project.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/meta\/entrymeta-project.php",
+		"oF": 0
+		},
+	"\/components\/meta\/entrymeta.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/meta\/entrymeta.php",
+		"oF": 0
+		},
 	"\/components\/navigation\/menu-main.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -368,130 +424,18 @@
 		"oAP": "\/components\/navigation\/menu-social.php",
 		"oF": 0
 		},
-	"\/components\/page\/entrycontent.php": {
+	"\/components\/navigation\/postnavigation.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/components\/page\/entrycontent.php",
+		"oAP": "\/components\/navigation\/postnavigation.php",
 		"oF": 0
 		},
-	"\/components\/page\/entryfooter.php": {
+	"\/components\/summary\/entrysummary.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/components\/page\/entryfooter.php",
-		"oF": 0
-		},
-	"\/components\/page\/entryheader.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/page\/entryheader.php",
-		"oF": 0
-		},
-	"\/components\/page\/entrymedia.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/page\/entrymedia.php",
-		"oF": 0
-		},
-	"\/components\/post\/entrycontent.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/post\/entrycontent.php",
-		"oF": 0
-		},
-	"\/components\/post\/entryfooter.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/post\/entryfooter.php",
-		"oF": 0
-		},
-	"\/components\/post\/entryheader-search.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/post\/entryheader-search.php",
-		"oF": 0
-		},
-	"\/components\/post\/entryheader.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/post\/entryheader.php",
-		"oF": 0
-		},
-	"\/components\/post\/entrymedia.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/post\/entrymedia.php",
-		"oF": 0
-		},
-	"\/components\/post\/entrymeta.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/post\/entrymeta.php",
-		"oF": 0
-		},
-	"\/components\/post\/entrysummary.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/post\/entrysummary.php",
-		"oF": 0
-		},
-	"\/components\/project\/entrycontent.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/project\/entrycontent.php",
-		"oF": 0
-		},
-	"\/components\/project\/entryfooter.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/project\/entryfooter.php",
-		"oF": 0
-		},
-	"\/components\/project\/entryheader-search.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/project\/entryheader-search.php",
-		"oF": 0
-		},
-	"\/components\/project\/entryheader.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/project\/entryheader.php",
-		"oF": 0
-		},
-	"\/components\/project\/entrymedia.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/project\/entrymedia.php",
-		"oF": 0
-		},
-	"\/components\/project\/entrymeta.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/project\/entrymeta.php",
-		"oF": 0
-		},
-	"\/components\/project\/entrysummary.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/components\/project\/entrysummary.php",
+		"oAP": "\/components\/summary\/entrysummary.php",
 		"oF": 0
 		},
 	"\/footer.php": {

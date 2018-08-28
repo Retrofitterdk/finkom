@@ -6,5 +6,7 @@
 *
 * @package Fin:kom
 */
-
-the_excerpt();
+?>
+<div class="entry-summary">
+  <?php the_excerpt(); ?>
+</div><!-- .entry-summary -->

@@ -58,11 +58,11 @@ if ( ! function_exists( 'finkom_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'finkom_entry_footer' ) ) :
+if ( ! function_exists( 'finkom_entry_terms' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function finkom_entry_footer() {
+	function finkom_entry_terms() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */

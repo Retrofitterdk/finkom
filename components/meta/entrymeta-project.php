@@ -6,7 +6,6 @@
 *
 * @package Fin:kom
 */
-
 ?>
 <div class="entry-meta">
   <?php finkom_project_meta('<ul class="project-meta">','</ul>'); ?>

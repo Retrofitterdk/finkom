@@ -141,7 +141,11 @@ if ( ! function_exists( 'finkom_setup' ) ) :
   )
 );
 
-
+/**
+* Add support for the Custom Content Portfolio plugin
+*
+*/
+add_theme_support( 'custom-content-portfolio' );
 
 endif;
 add_action( 'after_setup_theme', 'finkom_setup' );

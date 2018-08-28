@@ -6,5 +6,9 @@
 *
 * @package Fin:kom
 */
-
-finkom_entry_footer();
+?>
+<footer class="entry-footer">
+<?php
+finkom_entry_terms();
+  ?>
+</footer><!-- .entry-footer -->

@@ -8,26 +8,9 @@
 */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
 		<?php
-		get_template_part( 'components/page/entryheader', 'page' );
+		get_template_part( 'components/heading/entryheader', 'page' );
+		get_template_part( 'components/media/entrymedia', 'page' );
+		get_template_part( 'components/content/entrycontent', 'page' );
 		?>
-	</header><!-- .entry-header -->
-	<div class="entry-media">
-		<?php
-		get_template_part( 'components/page/entrymedia', 'page' );
-		?>
-	</div>
-	<div class="entry-content">
-		<?php
-		get_template_part( 'components/page/entrycontent', 'page' );
-		?>
-	</div><!-- .entry-content -->
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			get_template_part( 'components/page/entryfooter', 'page' );
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
