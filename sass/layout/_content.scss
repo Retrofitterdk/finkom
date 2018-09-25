@@ -5,16 +5,8 @@
 }
 
 .content-area {
-		@media (min-width: $larger-than-tablet) {
-			width: $nine-col;
-			margin-right: auto;
-			margin-left: auto;
-	}
-}
-
-.site-main {
-	@media (min-width: $larger-than-phablet) {
-		width: $two-thirds-col;
+	@media (min-width: $larger-than-tablet) {
+		width: $nine-col;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -24,6 +16,100 @@
 	@media (min-width: $larger-than-tablet) {
 		width: $three-col;
 		float: right;
+	}
+}
+
+.single .site-main {
+	@media (min-width: $larger-than-phablet) {
+		width: $two-thirds-col;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.single .entry-header,
+.single .entry-summary,
+.single .entry-media {
+	@media (min-width: $larger-than-tablet) {
+		margin-left: -27%;
+		body.no-sidebar & {
+			margin-right: -27%;
+		}
+	}
+}
+
+.entry-title {
+	.home & {
+		width: 50%;
+		margin-top: 10%;
+	}
+
+}
+
+// Post type archives
+
+body.no-sidebar.post-type-archive .content-area {
+	@media (min-width: $larger-than-tablet) {
+		width: $twelve-col;
+		.archive-content {
+			width: $two-thirds-col;
+			float: right;
+		}
+		.page-header {
+			width: $one-third-col;
+			margin-right: $inner-col-margin;
+			padding-left: .6rem;
+			border-left: .4rem solid $color__primary-light;
+			float: left;
+		}
+	}
+	// @media (min-width: $larger-than-phablet) {
+	@media (min-width: $larger-than-mobile) {
+		article {
+			width: $six-col;
+			float: left;
+			margin-right: $col__margin;
+			&:nth-child(2n+2) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.post-type-archive .content-area {
+	.page-header {
+		h1 {
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: .5rem;
+		}
+		p {
+			font-family: $font__heading;
+			margin: 0;
+		}
+	}
+}
+// Project post type
+
+
+// Single template
+
+.project .entry-meta {
+	margin: .8rem 0 1rem 0;
+	border: solid $color__primary-light;
+	border-width: 0 0 0 .15rem;
+	padding: .5rem 0 .5rem .5rem;
+	background: $color__accent-light;
+	@media (min-width: $larger-than-mobile) {
+		float: left;
+		width: 22%;
+		margin-right: 5%;
+	}
+	@media (min-width: $larger-than-tablet) {
+		margin-left: -27%;
+		margin-right: 0;
+	}
+	ul {
 	}
 }
 
