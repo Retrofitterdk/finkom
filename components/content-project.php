@@ -13,8 +13,10 @@
 	get_template_part( 'components/heading/entryheader', get_post_format() );
 	get_template_part( 'components/summary/entrysummary', get_post_format() );
 	get_template_part( 'components/media/entrymedia', get_post_format() );
-	get_template_part( 'components/meta/entrymeta', get_post_type() );
-	get_template_part( 'components/content/entrycontent', get_post_format() );
-	get_template_part( 'components/meta/entryfooter', get_post_format() );
+	if ( is_single() ) :
+		get_template_part( 'components/meta/entrymeta', get_post_type() );
+		get_template_part( 'components/content/entrycontent', get_post_format() );
+		get_template_part( 'components/meta/entryfooter', get_post_format() );
+	endif;
 	?>
 </article><!-- #post-<?php the_ID(); ?> -->
