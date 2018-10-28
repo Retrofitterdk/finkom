@@ -62,8 +62,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -230,8 +229,7 @@ fieldset {
  *		`fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -262,8 +260,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -541,15 +538,13 @@ ul.project-meta {
 # Elements
 --------------------------------------------------------------*/
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+  box-sizing: inherit; }
 
 body {
   background: #fff;
@@ -651,8 +646,7 @@ input[type="submit"] {
   white-space: nowrap;
   background-color: transparent;
   cursor: pointer;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid;
   border-color: #BDBDBD;
   border-radius: 3px;
@@ -722,10 +716,8 @@ select {
   padding: .6rem 10rem;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-shadow: none;
+  box-sizing: border-box;
   color: #212121;
   border: 1px solid #BDBDBD;
   border-radius: 3px;
@@ -812,7 +804,6 @@ a {
   height: 100%;
   overflow-y: scroll;
   overflow-x: visible;
-  -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
   z-index: 999;
   background: #d32f2f; }
@@ -841,8 +832,7 @@ a {
         margin: 0; }
   .main-navigation[aria-expanded="true"], .main-navigation:target {
     left: 0;
-    -webkit-box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.25);
-            box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.25); }
+    box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.25); }
     .main-navigation[aria-expanded="true"] + .backdrop, .main-navigation:target + .backdrop {
       position: absolute;
       display: block;
@@ -1026,8 +1016,7 @@ a {
   .screen-reader-text:focus {
     background-color: #fff;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     -webkit-clip-path: none;
             clip-path: none;
@@ -1116,7 +1105,9 @@ a {
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after,
+.widget:before,
+.widget:after {
   content: "";
   display: table;
   table-layout: fixed; }
@@ -1126,7 +1117,8 @@ a {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after,
+.widget:after {
   clear: both; }
 
 /*--------------------------------------------------------------
@@ -1350,17 +1342,24 @@ object {
     .single .entry-media {
       margin-right: -27%; } }
 
-.home .entry-title {
+.home .header-text {
   width: 50%;
   margin-top: 10%; }
 
 @media (min-width: 960px) {
-  body.no-sidebar.post-type-archive .content-area {
+  body.no-sidebar.archive .content-area,
+  body.no-sidebar.home .content-area {
     width: 100%; }
-    body.no-sidebar.post-type-archive .content-area .archive-content {
+    body.no-sidebar.archive .content-area .widget-content,
+    body.no-sidebar.archive .content-area .archive-content,
+    body.no-sidebar.home .content-area .widget-content,
+    body.no-sidebar.home .content-area .archive-content {
       width: 64.86%;
       float: right; }
-    body.no-sidebar.post-type-archive .content-area .page-header {
+    body.no-sidebar.archive .content-area .widget-header,
+    body.no-sidebar.archive .content-area .page-header,
+    body.no-sidebar.home .content-area .widget-header,
+    body.no-sidebar.home .content-area .page-header {
       width: 29.73%;
       margin-right: 5.4%;
       padding-left: .6rem;
@@ -1368,19 +1367,25 @@ object {
       float: left; } }
 
 @media (min-width: 460px) {
-  body.no-sidebar.post-type-archive .content-area article {
+  body.no-sidebar.archive .content-area article,
+  body.no-sidebar.home .content-area article {
     width: 48%;
     float: left;
     margin-right: 4%; }
-    body.no-sidebar.post-type-archive .content-area article:nth-child(2n+2) {
+    body.no-sidebar.archive .content-area article:nth-child(2n+2),
+    body.no-sidebar.home .content-area article:nth-child(2n+2) {
       margin-right: 0; } }
 
-.post-type-archive .content-area .page-header h1 {
+.content-area .widget-header h1,
+.content-area .widget-header h2,
+.content-area .page-header h1,
+.content-area .page-header h2 {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: .5rem; }
 
-.post-type-archive .content-area .page-header p {
+.content-area .widget-header p,
+.content-area .page-header p {
   font-family: "Arvo", sans-serif;
   margin: 0; }
 
