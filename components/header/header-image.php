@@ -7,8 +7,14 @@ if ( ! empty( $header_image ) ) : ?>
     <?php get_template_part( 'components/header/branding', 'site' ); ?>
     <?php get_template_part( 'components/header/navigation', 'site' ); ?>
     <?php if ( finkom_is_frontpage() ) :
-      the_title( '<h2 class="entry-title">', '</h2>' );
-      endif; ?>
+      ?>
+      <div class="header-text">
+        <?php
+        the_title( '<h2>', '</h2>' );
+        the_excerpt( '<p>', '</p>' );
+        ?>
+      </div>
+    <?php endif; ?>
   </div>
 </div>
 <?php
