@@ -20,6 +20,8 @@
 		if ( 'post' === get_post_type() ) :
 			get_template_part( 'components/meta/entryfooter', get_post_format() );
 		endif;
-	endif;
-	?>
-</article><!-- #post-<?php the_ID(); ?> -->
+		else :
+			get_template_part( 'components/summary/entrysummary', get_post_format() );
+		endif;
+		?>
+	</article><!-- #post-<?php the_ID(); ?> -->
