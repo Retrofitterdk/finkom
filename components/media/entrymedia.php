@@ -1,10 +1,11 @@
 <?php
 /**
-* Template part for displaying entry-summary on posts
+* Template part for displaying entry-media on posts
 *
 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
 *
 * @package Fin:kom
 */
 
-the_excerpt();
+finkom_post_thumbnail();
+?>

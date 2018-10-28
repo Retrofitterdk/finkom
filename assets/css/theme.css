@@ -62,8 +62,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -230,8 +229,7 @@ fieldset {
  *		`fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -262,8 +260,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -369,28 +366,60 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: 300;
   clear: both; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #212121;
+    text-decoration: none; }
+    h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+      color: #212121; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+      text-decoration: underline;
+      color: #f44336; }
 
 h1 {
-  font-size: 40px;
-  font-size: 2.5rem; }
-
-h2 {
   font-size: 36px;
   font-size: 2.25rem; }
 
-h3 {
-  font-size: 30px;
-  font-size: 1.875rem; }
-
-h4 {
+h2 {
   font-size: 24px;
   font-size: 1.5rem; }
 
-h5 {
+h3 {
   font-size: 20px;
   font-size: 1.25rem; }
 
+h4 {
+  font-size: 17px;
+  font-size: 1.0625rem; }
+
+h5 {
+  font-size: 17px;
+  font-size: 1.0625rem; }
+
 h6 {
+  font-size: 17px;
+  font-size: 1.0625rem; }
+
+.single h1 {
+  font-size: 40px;
+  font-size: 2.5rem; }
+
+.single h2 {
+  font-size: 36px;
+  font-size: 2.25rem; }
+
+.single h3 {
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+.single h4 {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+.single h5 {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.single h6 {
   font-size: 17px;
   font-size: 1.0625rem; }
 
@@ -437,15 +466,6 @@ h6 {
         line-height: 1.15; }
         .has-header-image .site-branding .site-title {
           line-height: 1.3; } }
-
-@media (min-width: 960px) {
-  .entry-header {
-    margin-left: -27%;
-    margin-right: -27%; } }
-
-.home .entry-title {
-  width: 50%;
-  margin-top: 10%; }
 
 p {
   margin: .5rem 0 1rem 0; }
@@ -497,19 +517,34 @@ mark, ins {
 big {
   font-size: 125%; }
 
+ul.project-meta {
+  list-style: none;
+  margin: 0 0 .5rem 0; }
+  ul.project-meta li {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold; }
+    ul.project-meta li .project-data {
+      font-weight: normal; }
+
+.project .entry-meta p {
+  margin: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+  box-sizing: inherit; }
 
 body {
   background: #fff;
@@ -577,7 +612,7 @@ table {
   width: 100%; }
   table th,
   table td {
-    padding: 1.2rem 15rem;
+    padding: 1.2rem 1.5rem;
     text-align: left;
     border-bottom: 1px solid #BDBDBD; }
     table th:first-child, table th:first-child,
@@ -611,8 +646,7 @@ input[type="submit"] {
   white-space: nowrap;
   background-color: transparent;
   cursor: pointer;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid;
   border-color: #BDBDBD;
   border-radius: 3px;
@@ -682,10 +716,8 @@ select {
   padding: .6rem 10rem;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-shadow: none;
+  box-sizing: border-box;
   color: #212121;
   border: 1px solid #BDBDBD;
   border-radius: 3px;
@@ -753,7 +785,7 @@ label > .label-body {
 a {
   color: #d32f2f; }
   a:visited {
-    color: #ffcdd2; }
+    color: #757575; }
   a:hover, a:focus, a:active {
     color: #f44336; }
   a:focus {
@@ -772,7 +804,6 @@ a {
   height: 100%;
   overflow-y: scroll;
   overflow-x: visible;
-  -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
   z-index: 999;
   background: #d32f2f; }
@@ -801,8 +832,7 @@ a {
         margin: 0; }
   .main-navigation[aria-expanded="true"], .main-navigation:target {
     left: 0;
-    -webkit-box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.25);
-            box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.25); }
+    box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.25); }
     .main-navigation[aria-expanded="true"] + .backdrop, .main-navigation:target + .backdrop {
       position: absolute;
       display: block;
@@ -986,8 +1016,7 @@ a {
   .screen-reader-text:focus {
     background-color: #fff;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     -webkit-clip-path: none;
             clip-path: none;
@@ -1045,7 +1074,8 @@ a {
   .alignwide {
     margin-left: calc( -100vw / 2 + 100% / 2);
     margin-right: calc( -100vw / 2 + 100% / 2);
-    width: 100vw; }
+    width: 100vw;
+    max-width: none; }
   @media (min-width: 960px) {
     body.has-sidebar .entry-content .alignfull, body.has-sidebar .entry-content
     .alignwide {
@@ -1075,7 +1105,9 @@ a {
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after,
+.widget:before,
+.widget:after {
   content: "";
   display: table;
   table-layout: fixed; }
@@ -1085,7 +1117,8 @@ a {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after,
+.widget:after {
   clear: both; }
 
 /*--------------------------------------------------------------
@@ -1288,16 +1321,89 @@ object {
     margin-right: auto;
     margin-left: auto; } }
 
+@media (min-width: 960px) {
+  .site-content .widget-area {
+    width: 22%;
+    float: right; } }
+
 @media (min-width: 650px) {
-  .site-main {
+  .single .site-main {
     width: 64.86%;
     margin-right: auto;
     margin-left: auto; } }
 
 @media (min-width: 960px) {
-  .site-content .widget-area {
-    width: 22%;
-    float: right; } }
+  .single .entry-header,
+  .single .entry-summary,
+  .single .entry-media {
+    margin-left: -27%; }
+    body.no-sidebar .single .entry-header, body.no-sidebar
+    .single .entry-summary, body.no-sidebar
+    .single .entry-media {
+      margin-right: -27%; } }
+
+.home .header-text {
+  width: 50%;
+  margin-top: 10%; }
+
+@media (min-width: 960px) {
+  body.no-sidebar.archive .content-area,
+  body.no-sidebar.home .content-area {
+    width: 100%; }
+    body.no-sidebar.archive .content-area .widget-content,
+    body.no-sidebar.archive .content-area .archive-content,
+    body.no-sidebar.home .content-area .widget-content,
+    body.no-sidebar.home .content-area .archive-content {
+      width: 64.86%;
+      float: right; }
+    body.no-sidebar.archive .content-area .widget-header,
+    body.no-sidebar.archive .content-area .page-header,
+    body.no-sidebar.home .content-area .widget-header,
+    body.no-sidebar.home .content-area .page-header {
+      width: 29.73%;
+      margin-right: 5.4%;
+      padding-left: .6rem;
+      border-left: 0.4rem solid #ffcdd2;
+      float: left; } }
+
+@media (min-width: 460px) {
+  body.no-sidebar.archive .content-area article,
+  body.no-sidebar.home .content-area article {
+    width: 48%;
+    float: left;
+    margin-right: 4%; }
+    body.no-sidebar.archive .content-area article:nth-child(2n+2),
+    body.no-sidebar.home .content-area article:nth-child(2n+2) {
+      margin-right: 0; } }
+
+.content-area .widget-header h1,
+.content-area .widget-header h2,
+.content-area .page-header h1,
+.content-area .page-header h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: .5rem; }
+
+.content-area .widget-header p,
+.content-area .page-header p {
+  font-family: "Arvo", sans-serif;
+  margin: 0; }
+
+.project .entry-meta {
+  margin: .8rem 0 1rem 0;
+  border: solid #ffcdd2;
+  border-width: 0 0 0 .15rem;
+  padding: .5rem 0 .5rem .5rem;
+  background: #E5E5E5; }
+  @media (min-width: 460px) {
+    .project .entry-meta {
+      float: left;
+      width: 22%;
+      margin-right: 5%; } }
+  @media (min-width: 960px) {
+    .project .entry-meta {
+      margin-left: -27%;
+      margin-right: 0; } }
 
 .has-sidebar .content-area {
   float: left;

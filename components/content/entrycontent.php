@@ -6,6 +6,9 @@
 *
 * @package Fin:kom
 */
+?>
+<div class="entry-content">
+<?php
 the_content( sprintf(
   wp_kses(
     /* translators: %s: Name of current post. Only visible to screen readers */
@@ -23,3 +26,5 @@ the_content( sprintf(
     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'finkom' ),
     'after'  => '</div>',
   ) );
+?>
+</div><!-- .entry-content -->

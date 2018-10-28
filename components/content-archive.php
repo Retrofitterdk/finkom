@@ -9,8 +9,8 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
-		get_template_part( 'components/heading/entryheader', 'page' );
 		get_template_part( 'components/media/entrymedia', 'page' );
-		get_template_part( 'components/content/entrycontent', 'page' );
+		get_template_part( 'components/heading/entryheader', 'page' );
+		get_template_part( 'components/summary/entrysummary', get_post_format() );
 		?>
 </article><!-- #post-<?php the_ID(); ?> -->
