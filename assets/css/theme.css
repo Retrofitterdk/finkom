@@ -567,6 +567,15 @@ figure {
   margin: .5rem 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
+.team-member .entry-media img {
+  border-radius: 50%; }
+
+@media (min-width: 960px) {
+  .single .team-member .entry-media {
+    width: 50%;
+    float: left;
+    margin-right: 1rem; } }
+
 .wp-block-image figcaption {
   margin-top: .25em;
   color: #757575;
@@ -1196,6 +1205,9 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block; }
+
+.entry-media {
+  margin-bottom: 1rem; }
 
 /*--------------------------------------------------------------
 ## Captions
