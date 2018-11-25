@@ -29,6 +29,25 @@ figure {
 	margin: .5rem 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+// Team member elements
+
+.team-member {
+	.entry-media {
+		img {
+			border-radius: 50%;
+		}
+	}
+	.single & {
+		@media (min-width: $larger-than-tablet) {
+		.entry-media {
+			width: 50%;
+			float: left;
+			margin-right: 1rem;
+		}
+	}
+}
+}
+
 @import "blocks";
 @import "lists";
 @import "tables";
