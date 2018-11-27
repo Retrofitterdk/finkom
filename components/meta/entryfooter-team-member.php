@@ -6,12 +6,15 @@
 *
 * @package Fin:kom
 */
-if ( function_exists( 'finkom_team_member_terms' ) ) :
 ?>
 <footer class="entry-footer">
-<?php
-finkom_team_member_terms();
+  <?php
+  if ( function_exists( 'finkom_team_member_meta' ) ) :
+    finkom_team_member_meta();
+  endif;
+  if ( function_exists( 'finkom_team_member_terms' ) ) :
+    finkom_team_member_terms();
+  endif;
   ?>
 </footer><!-- .entry-footer -->
 <?php
-endif;
