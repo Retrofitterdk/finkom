@@ -5,12 +5,21 @@ ul, ol {
 }
 
 ul {
+	list-style: none;
+}
+
+.entry-content ul {
 	list-style: circle inside;
 }
 
 ol {
+	list-style: none;
+}
+
+.entry-content ol {
 	list-style: decimal inside;
 }
+
 
 li {
 	margin-bottom: 1rem;

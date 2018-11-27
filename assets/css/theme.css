@@ -598,9 +598,15 @@ ul, ol {
   margin-top: 0; }
 
 ul {
+  list-style: none; }
+
+.entry-content ul {
   list-style: circle inside; }
 
 ol {
+  list-style: none; }
+
+.entry-content ol {
   list-style: decimal inside; }
 
 li {
