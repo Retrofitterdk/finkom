@@ -7,7 +7,7 @@
 		"uuidString": "D78BDB38-2FD2-4EA5-AC85-5FDE8B42AE73"
 		}
 	],
-"creatorBuild": "28901",
+"creatorBuild": "28905",
 "files": {
 	"/.gitattributes": {
 		"cB": 0,
@@ -298,6 +298,13 @@
 		"oAP": "/components/content-archive.php",
 		"oF": 0
 		},
+	"/components/content-feature.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/components/content-feature.php",
+		"oF": 0
+		},
 	"/components/content-front-page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -331,6 +338,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/components/content-search.php",
+		"oF": 0
+		},
+	"/components/content-team-member.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/components/content-team-member.php",
 		"oF": 0
 		},
 	"/components/content.php": {
@@ -394,6 +408,27 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/components/media/entrymedia.php",
+		"oF": 0
+		},
+	"/components/meta/entryfooter-feature.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/components/meta/entryfooter-feature.php",
+		"oF": 0
+		},
+	"/components/meta/entryfooter-project.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/components/meta/entryfooter-project.php",
+		"oF": 0
+		},
+	"/components/meta/entryfooter-team-member.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/components/meta/entryfooter-team-member.php",
 		"oF": 0
 		},
 	"/components/meta/entryfooter.php": {
@@ -471,6 +506,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/header.php",
+		"oF": 0
+		},
+	"/home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/home.php",
 		"oF": 0
 		},
 	"/inc/custom-header.php": {
@@ -1122,11 +1164,25 @@
 		"oAP": "/sidebar.php",
 		"oF": 0
 		},
+	"/single-feature.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-feature.php",
+		"oF": 0
+		},
 	"/single-project.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/single-project.php",
+		"oF": 0
+		},
+	"/single-team-member.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-team-member.php",
 		"oF": 0
 		},
 	"/single.php": {
